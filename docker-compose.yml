@@ -8,13 +8,20 @@ services:
     volumes:
       - ./configuration/chirpstack:/etc/chirpstack
       - ./lorawan-devices:/opt/lorawan-devices
+
     depends_on:
       - postgres
       - mosquitto
       - redis
     ports:
-      - 8080:8080
-
+        - target: 8080
+          published: 8080
+          protocol: tcp
+          mode: ingress
+    secrets:
+      - my_secret
+    labels:
+      io.kompose.volume.type: configMap
   chirpstack-gateway-bridge-eu868:
     image: chirpstack/chirpstack-gateway-bridge:3
     ports:
@@ -23,19 +30,32 @@ services:
       - ./configuration/chirpstack-gateway-bridge:/etc/chirpstack-gateway-bridge
     depends_on: 
       - mosquitto
+    labels:
+      io.kompose.volume.type: configMap
 
   postgres:
     image: postgres:11-alpine
+    ports:
+      - 5432:5432
     volumes:
       - ./configuration/postgresql/initdb:/docker-entrypoint-initdb.d
       - postgresqldata:/var/lib/postgresql/data
     environment:
+      - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=root
+    labels:
+      io.kompose.volume.type: configMap
 
   redis:
     image: redis:6-alpine
+    ports:
+      - 6379:6379
     volumes:
       - redisdata:/data
+    labels:
+      io.kompose.volume.type: configMap
+    
+
 
   mosquitto:
     image: eclipse-mosquitto:2
@@ -43,7 +63,12 @@ services:
       - 1883:1883
     volumes: 
       - ./configuration/eclipse-mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+    labels:
+      io.kompose.volume.type: configMap
 
 volumes:
   postgresqldata:
   redisdata:
+secrets:
+  my_secret:
+    file: configuration/secrets/my_secrets.txt
