@@ -1,0 +1,1853 @@
+apiVersion: v1
+data:
+  .gitignore: |
+    .vscode
+    node_modules
+    .DS_Store
+    bin/runscript
+    bin/validate-image
+    .envrc
+    .idea
+  .prettierrc: |
+    printWidth: 200
+    singleQuote: true
+  CODEOWNERS: |
+    / @johanstokking
+    /website @mjamescompton
+  LICENSE: |2
+                                     Apache License
+                               Version 2.0, January 2004
+                            http://www.apache.org/licenses/
+
+       TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+       1. Definitions.
+
+          "License" shall mean the terms and conditions for use, reproduction,
+          and distribution as defined by Sections 1 through 9 of this document.
+
+          "Licensor" shall mean the copyright owner or entity authorized by
+          the copyright owner that is granting the License.
+
+          "Legal Entity" shall mean the union of the acting entity and all
+          other entities that control, are controlled by, or are under common
+          control with that entity. For the purposes of this definition,
+          "control" means (i) the power, direct or indirect, to cause the
+          direction or management of such entity, whether by contract or
+          otherwise, or (ii) ownership of fifty percent (50%) or more of the
+          outstanding shares, or (iii) beneficial ownership of such entity.
+
+          "You" (or "Your") shall mean an individual or Legal Entity
+          exercising permissions granted by this License.
+
+          "Source" form shall mean the preferred form for making modifications,
+          including but not limited to software source code, documentation
+          source, and configuration files.
+
+          "Object" form shall mean any form resulting from mechanical
+          transformation or translation of a Source form, including but
+          not limited to compiled object code, generated documentation,
+          and conversions to other media types.
+
+          "Work" shall mean the work of authorship, whether in Source or
+          Object form, made available under the License, as indicated by a
+          copyright notice that is included in or attached to the work
+          (an example is provided in the Appendix below).
+
+          "Derivative Works" shall mean any work, whether in Source or Object
+          form, that is based on (or derived from) the Work and for which the
+          editorial revisions, annotations, elaborations, or other modifications
+          represent, as a whole, an original work of authorship. For the purposes
+          of this License, Derivative Works shall not include works that remain
+          separable from, or merely link (or bind by name) to the interfaces of,
+          the Work and Derivative Works thereof.
+
+          "Contribution" shall mean any work of authorship, including
+          the original version of the Work and any modifications or additions
+          to that Work or Derivative Works thereof, that is intentionally
+          submitted to Licensor for inclusion in the Work by the copyright owner
+          or by an individual or Legal Entity authorized to submit on behalf of
+          the copyright owner. For the purposes of this definition, "submitted"
+          means any form of electronic, verbal, or written communication sent
+          to the Licensor or its representatives, including but not limited to
+          communication on electronic mailing lists, source code control systems,
+          and issue tracking systems that are managed by, or on behalf of, the
+          Licensor for the purpose of discussing and improving the Work, but
+          excluding communication that is conspicuously marked or otherwise
+          designated in writing by the copyright owner as "Not a Contribution."
+
+          "Contributor" shall mean Licensor and any individual or Legal Entity
+          on behalf of whom a Contribution has been received by Licensor and
+          subsequently incorporated within the Work.
+
+       2. Grant of Copyright License. Subject to the terms and conditions of
+          this License, each Contributor hereby grants to You a perpetual,
+          worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+          copyright license to reproduce, prepare Derivative Works of,
+          publicly display, publicly perform, sublicense, and distribute the
+          Work and such Derivative Works in Source or Object form.
+
+       3. Grant of Patent License. Subject to the terms and conditions of
+          this License, each Contributor hereby grants to You a perpetual,
+          worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+          (except as stated in this section) patent license to make, have made,
+          use, offer to sell, sell, import, and otherwise transfer the Work,
+          where such license applies only to those patent claims licensable
+          by such Contributor that are necessarily infringed by their
+          Contribution(s) alone or by combination of their Contribution(s)
+          with the Work to which such Contribution(s) was submitted. If You
+          institute patent litigation against any entity (including a
+          cross-claim or counterclaim in a lawsuit) alleging that the Work
+          or a Contribution incorporated within the Work constitutes direct
+          or contributory patent infringement, then any patent licenses
+          granted to You under this License for that Work shall terminate
+          as of the date such litigation is filed.
+
+       4. Redistribution. You may reproduce and distribute copies of the
+          Work or Derivative Works thereof in any medium, with or without
+          modifications, and in Source or Object form, provided that You
+          meet the following conditions:
+
+          (a) You must give any other recipients of the Work or
+              Derivative Works a copy of this License; and
+
+          (b) You must cause any modified files to carry prominent notices
+              stating that You changed the files; and
+
+          (c) You must retain, in the Source form of any Derivative Works
+              that You distribute, all copyright, patent, trademark, and
+              attribution notices from the Source form of the Work,
+              excluding those notices that do not pertain to any part of
+              the Derivative Works; and
+
+          (d) If the Work includes a "NOTICE" text file as part of its
+              distribution, then any Derivative Works that You distribute must
+              include a readable copy of the attribution notices contained
+              within such NOTICE file, excluding those notices that do not
+              pertain to any part of the Derivative Works, in at least one
+              of the following places: within a NOTICE text file distributed
+              as part of the Derivative Works; within the Source form or
+              documentation, if provided along with the Derivative Works; or,
+              within a display generated by the Derivative Works, if and
+              wherever such third-party notices normally appear. The contents
+              of the NOTICE file are for informational purposes only and
+              do not modify the License. You may add Your own attribution
+              notices within Derivative Works that You distribute, alongside
+              or as an addendum to the NOTICE text from the Work, provided
+              that such additional attribution notices cannot be construed
+              as modifying the License.
+
+          You may add Your own copyright statement to Your modifications and
+          may provide additional or different license terms and conditions
+          for use, reproduction, or distribution of Your modifications, or
+          for any such Derivative Works as a whole, provided Your use,
+          reproduction, and distribution of the Work otherwise complies with
+          the conditions stated in this License.
+
+       5. Submission of Contributions. Unless You explicitly state otherwise,
+          any Contribution intentionally submitted for inclusion in the Work
+          by You to the Licensor shall be under the terms and conditions of
+          this License, without any additional terms or conditions.
+          Notwithstanding the above, nothing herein shall supersede or modify
+          the terms of any separate license agreement you may have executed
+          with Licensor regarding such Contributions.
+
+       6. Trademarks. This License does not grant permission to use the trade
+          names, trademarks, service marks, or product names of the Licensor,
+          except as required for reasonable and customary use in describing the
+          origin of the Work and reproducing the content of the NOTICE file.
+
+       7. Disclaimer of Warranty. Unless required by applicable law or
+          agreed to in writing, Licensor provides the Work (and each
+          Contributor provides its Contributions) on an "AS IS" BASIS,
+          WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+          implied, including, without limitation, any warranties or conditions
+          of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+          PARTICULAR PURPOSE. You are solely responsible for determining the
+          appropriateness of using or redistributing the Work and assume any
+          risks associated with Your exercise of permissions under this License.
+
+       8. Limitation of Liability. In no event and under no legal theory,
+          whether in tort (including negligence), contract, or otherwise,
+          unless required by applicable law (such as deliberate and grossly
+          negligent acts) or agreed to in writing, shall any Contributor be
+          liable to You for damages, including any direct, indirect, special,
+          incidental, or consequential damages of any character arising as a
+          result of this License or out of the use or inability to use the
+          Work (including but not limited to damages for loss of goodwill,
+          work stoppage, computer failure or malfunction, or any and all
+          other commercial damages or losses), even if such Contributor
+          has been advised of the possibility of such damages.
+
+       9. Accepting Warranty or Additional Liability. While redistributing
+          the Work or Derivative Works thereof, You may choose to offer,
+          and charge a fee for, acceptance of support, warranty, indemnity,
+          or other liability obligations and/or rights consistent with this
+          License. However, in accepting such obligations, You may act only
+          on Your own behalf and on Your sole responsibility, not on behalf
+          of any other Contributor, and only if You agree to indemnify,
+          defend, and hold each Contributor harmless for any liability
+          incurred by, or claims asserted against, such Contributor by reason
+          of your accepting any such warranty or additional liability.
+  Makefile: |
+    # Copyright © 2020 The Things Network Foundation, The Things Industries B.V.
+    #
+    # Licensed under the Apache License, Version 2.0 (the "License");
+    # you may not use this file except in compliance with the License.
+    # You may obtain a copy of the License at
+    #
+    #     http://www.apache.org/licenses/LICENSE-2.0
+    #
+    # Unless required by applicable law or agreed to in writing, software
+    # distributed under the License is distributed on an "AS IS" BASIS,
+    # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    # See the License for the specific language governing permissions and
+    # limitations under the License.
+
+    SHELL = bash
+    GIT = git
+    NPM = npm
+    GO = go
+    GOBIN = $(PWD)/bin
+    export GOBIN
+
+    .PHONY: default
+    default: validate
+
+    .PHONY: deps
+    deps:
+    	$(NPM) install
+    	pushd ./tools/runscript && $(GO) install . && popd
+    	pushd ./tools/validate-image && $(GO) install . && popd
+
+    .PHONY: deps.update
+    deps.update:
+    	$(GIT) subtree pull -P lib/draft https://github.com/lorawan-schema/draft-devices.git v1
+
+    .PHONY: validate
+    validate:
+    	$(NPM) run validate
+
+    .PHONY: fmt
+    fmt:
+    	$(NPM) run format
+
+    # vim: ft=make
+  README.md: |
+    # Device Repository for LoRaWAN
+
+    The Device Repository contains information about LoRaWAN end devices. The Device Repository acts as key data source for device catalogs and onboarding devices on LoRaWAN networks.
+
+    This repository is a collaborative effort, driven by The Things Network community. We welcome device makers to contribute information about their end devices to help users find and onboard their devices.
+
+    ## Example
+
+    Curious to how end devices, profiles and payload is defined in the Device Repository? [Go to the fully documented example](./vendor/example).
+
+    ## How-to video
+
+    To help you add devices to this repository, you can follow along in this example video where we walk through all of the instructions below.
+
+    [![Adding devices to the device repository](https://img.youtube.com/vi/pnwtEgw4f-c/0.jpg)](https://www.youtube.com/watch?v=pnwtEgw4f-c)
+
+    ## Prerequisites
+
+    One of the operating systems:
+
+    - Linux
+    - macOS
+    - Windows Subsystem for Linux ([Install](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and [Upgrade WSL Go version](https://sal.as/post/install-golan-on-wsl/))
+
+    Development dependencies:
+
+    - Node.js version 16.x
+    - npm version 8.x
+    - Go version 1.17.x
+
+    To check your Node.js, npm and Go versions:
+
+    ```bash
+    $ node -v
+    $ npm -v
+    $ go version
+    ```
+
+    [Download and install Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and [Download Go](https://golang.org/dl/).
+
+    Then, install the dependencies:
+
+    ```bash
+    $ make deps
+    ```
+
+    ## Contributing
+
+    If you want to submit your devices to the Device Repository, fork this repository and open a pull request. [Learn how to fork and create pull requests](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+
+    Pull requests are validated automatically. If there are any validation or formatting errors, the validation checks will not pass, and the pull request will not be merged until those errors are resolved. Therefore, before creating a pull request, run the following action to validate and format your data locally:
+
+    ```bash
+    $ make validate fmt
+    ```
+
+    ## Validation
+
+    The Device Repository contains tooling to validate all data against a schema. This is necessary for all data to be loaded automatically in The Things Stack and other services.
+
+    To validate data:
+
+    ```bash
+    $ make validate
+    ```
+
+    [Visual Studio Code](https://code.visualstudio.com/) is a great editor for editing the Device Repository. You can validate your data automatically using the [YAML plugin](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml).
+
+    The YAML plugin supports you with filling out the document. When hitting Ctrl + Space, all fields are shown. The Debug Console of Visual Studio provides feedback by highlighting the incorrect fields.
+
+    ![Validation in Visual Studio Code](./doc/vs-code-validation.png)
+
+    ## Files and Directories
+
+    There are six file types in the Device Repository:
+
+    1. **Vendor index** with a list of vendors (`vendor/index.yaml`)
+    2. **Vendor device index** with all the devices of a vendor (`vendor/<vendor-id>/index.yaml`)
+    3. **End device definition** of a single device (`vendor/<vendor-id>/<device-id>.yaml`)
+    4. **End device profile** for one or more devices (`vendor/<vendor-id>/<profile-id>.yaml`). **Note**: this can also refer to a profile in a different vendor folder, by specifying the `vendorID`. See below for an example
+    5. **Payload codec definition** for one or more devices (`vendor/<vendor-id>/<codec>.yaml`)
+    6. **Payload codec implementation** to decode and encode payload (`vendor/<vendor-id>/<codec>.js`)
+
+    > All files and folders must have lowercase titles.
+
+    An example directory structure with a vendor named `company-x` that produces two devices (`device-a` and `device-b`). There's a module maker named `module-maker` that provides a standard profile `module-profile-eu868` that can be referenced by end device vendors:
+
+    ```bash
+    lorawan-devices
+    ├── vendor
+    │   ├── index.yaml              # vendor index (1)
+    │   ├── module-maker
+    │   │   └── module-profile-eu868.yaml # generic end device profile for EU868 (4)
+    │   ├── company-x
+    │   │   ├── index.yaml          # vendor device index (2)
+    │   │   ├── logo.svg            # vendor logo
+    │   │   ├── device-a.jpg        # photo of device-a
+    │   │   ├── device-a.yaml       # device-a definition (3)
+    │   │   ├── device-b.jpg        # photo of device-b
+    │   │   ├── device-b.yaml       # device-b definition (3)
+    │   │   ├── custom-profile-us915.yaml # end device profile for US915 (4)
+    │   │   ├── codec.js            # payload codec implementation (6)
+    │   │   └── codec.yaml          # payload codec definition (5)
+    ```
+
+    ### Vendor Index
+
+    First, make sure that your company is listed in the **Vendor index** in `vendor/index.yaml` and that the information is complete.
+
+    If your company is not listed or if you want to add additional information, add your information like so:
+
+    ```yaml
+    vendors:
+      - # Unique identifier of the vendor (lowercase, alphanumeric with dashes, max 36 characters)
+        id: company-x
+        # Vendor company name
+        name: Company X
+        # Vendor company description (optional)
+        description:
+        # LoRa Alliance issued Vendor ID
+        vendorID: 10
+        # Vendor website (optional)
+        website: https://www.company-x.com
+        # Vendor logo filename (optional)
+        logo: logo.svg
+        # Vendor social media links and handles (optional)
+        social:
+          linkedin: https://www.linkedin.com/company/company-x/ # uri
+          facebook: https://www.facebook.com/company-x # uri
+          twitter: company-x  # handle
+          instagram: company-x # handle
+          github: company-x # handle
+        # Organization Unique Identifiers (OUIs, six digit hex, optional): http://standards-oui.ieee.org/oui.txt
+        # The OUI is typically the first 3 bytes of the DevEUI
+        ouis:
+          - FCD6BD
+        # Private Enterprise Number (optional): https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers
+        pen: 42
+    ```
+
+    The vendor data will be in the `vendor/<vendor-id>` folder (e.g. `vendor/company-x`). Create the folder if it does not exist yet.
+
+    ### Vendor Device Index
+
+    All vendor data is referenced from the **Vendor device index** file: `vendor/<vendor-id>/index.yaml`:
+
+    ```yaml
+    endDevices:
+      - device-a
+      - device-b
+    ```
+
+    All end device identifiers must be lowercase, alphanumeric with dashes and max 36 characters.
+
+    ### End Device
+
+    For each end device, create an **End device definition** file with the same filename as the identifier in the index: `vendor/<vendor-id>/<device-id>.yaml`:
+
+    ```yaml
+    name: Device A
+    description: My first LoRaWAN device
+    # Hardware versions (optional)
+    hardwareVersions:
+      - version: '1.0'
+        numeric: 1
+    # Firmware versions (at least one is mandatory)
+    firmwareVersions:
+      - # Firmware version
+        version: '1.0'
+        numeric: 1
+        # Supported hardware versions (optional)
+        hardwareVersions:
+          - '1.0' # Must refer to hardwareVersions declared above
+        # LoRaWAN Device Profiles per region
+        # Supported regions: EU863-870, US902-928, AU915-928, AS923, CN779-787, EU433, CN470-510, KR920-923, IN865-867, RU864-870
+        profiles:
+          EU863-870:
+            # Optional identifier of the vendor of the profile. When you specify the vendorID, the profile is loaded from
+            # the vendorID's folder. This allows you to reuse profiles from module or LoRaWAN end device stack vendors.
+            # When vendorID is empty, the profile is loaded from the current directory.
+            vendorID: module-maker
+            # Unique identifier of the profile (lowercase, alphanumeric with dashes, max 36 characters).
+            # This is the file name of the profile and must have the .yaml extension.
+            id: module-profile-eu868
+            # Specify whether the device is LoRa Alliance certified.
+            lorawanCertified: true
+            codec: device-a-codec
+          US902-928:
+            # This is the file name of the profile and must have the .yaml extension.
+            id: custom-profile-us915
+            # Specify whether the device is LoRa Alliance certified.
+            lorawanCertified: true
+            # This is the file name of the codec defintion and must have the .yaml extension.
+            codec: device-a-codec
+    ```
+
+    There are many other fields that can be set: hardware versions, firmware versions, sensors, dimensions, weight, battery information, operating conditions, IP code, security information, photos and regulatory and compliancy information. See [Example Wind Sensor](./vendor/example/windsensor.yaml) for a full example.
+
+    > **NOTE** It is highly recommended to fill out as many information about the end devices as possible. The definition above is the bare minimum information.
+
+    ### End Device Profile
+
+    Each referenced end device profile needs to be defined in the **End device profile**, with the same filename as the profile ID: `vendor/<vendor-id>/<profile-id>.yaml`:
+
+    ```yaml
+    # Vendor profile ID, can be freely issued by the vendor
+    # This vendor profile ID is also used on the QR code for LoRaWAN devices, see
+    # https://lora-alliance.org/wp-content/uploads/2020/10/LoRa_Alliance_Vendor_ID_for_QR_Code.pdf
+    vendorProfileID: 0
+
+    # LoRaWAN MAC version: 1.0, 1.0.1, 1.0.2, 1.0.3, 1.0.4 or 1.1
+    macVersion: 1.0.3
+    # LoRaWAN Regional Parameters version. Values depend on the LoRaWAN version:
+    #   1.0:   TS001-1.0
+    #   1.0.1: TS001-1.0.1
+    #   1.0.2: RP001-1.0.2 or RP001-1.0.2-RevB
+    #   1.0.3: RP001-1.0.3-RevA
+    #   1.0.4: RP002-1.0.0 or RP002-1.0.1
+    #   1.1:   RP001-1.1-RevA or RP001-1.1-RevB
+    regionalParametersVersion: RP001-1.0.3-RevA
+
+    # Whether the end device supports join (OTAA) or not (ABP)
+    supportsJoin: true
+    # If your device is an ABP device (supportsJoin is false), uncomment the following fields:
+    # RX1 delay
+    #rx1Delay: 5
+    # RX1 data rate offset
+    #rx1DataRateOffset: 0
+    # RX2 data rate index
+    #rx2DataRateIndex: 0
+    # RX2 frequency (MHz)
+    #rx2Frequency: 869.525
+    # Factory preset frequencies (MHz)
+    #factoryPresetFrequencies: [868.1, 868.3, 868.5, 867.1, 867.3, 867.5, 867.7, 867.9]
+
+    # Maximum EIRP
+    maxEIRP: 16
+    # Whether the end device supports 32-bit frame counters
+    supports32bitFCnt: true
+
+    # Whether the end device supports class B
+    supportsClassB: false
+    # If your device supports class B, uncomment the following fields:
+    # Maximum delay for the end device to answer a MAC request or confirmed downlink frame (seconds)
+    #classBTimeout: 60
+    # Ping slot period (seconds)
+    #pingSlotPeriod: 128
+    # Ping slot data rate index
+    #pingSlotDataRateIndex: 0
+    # Ping slot frequency (MHz). Set to 0 if the band supports ping slot frequency hopping.
+    #pingSlotFrequency: 869.525
+
+    # Whether the end device supports class C
+    supportsClassC: false
+    # If your device supports class C, uncomment the following fields:
+    # Maximum delay for the end device to answer a MAC request or confirmed downlink frame (seconds)
+    #classCTimeout: 60
+    ```
+
+    For more information and for fields for ABP, see [LoRaWAN Schema: Devices Draft 1](https://lorawan-schema.org/draft/devices/1/).
+
+    ### Payload Codecs
+
+    The Device Repository supports three payload codecs to be defined:
+
+    1. Uplink decoder: decodes binary data uplink into a JSON object
+    2. Downlink encoder: decodes a JSON object into binary data downlink
+    3. Downlink decoder: decodes an encoded binary data downlink back into a JSON object (must be symmetric with the downlink encoder)
+
+    **Note:** We recommend using measure units and full variable names in payload decoders for a better user experience.
+
+    The codecs can all be defined in one file as they are defined by their function names. The codecs must be written in JavaScript (ECMAScript 5.1+). [See link](https://thethingsstack.io/integrations/payload-formatters/javascript/) for instructions on how to write decoders and encoders.
+
+    The codecs are defined in the **Payload codec definition** file, with the same filename as the codec ID: `vendor/<vendor-id>/<codec>.yaml`:
+
+    ```yaml
+    # Uplink decoder decodes binary data uplink into a JSON object (optional)
+    # For documentation on writing encoders and decoders, see: https://thethingsstack.io/integrations/payload-formatters/javascript/
+    uplinkDecoder:
+      fileName: codec.js
+      # Examples (optional)
+      examples:
+        - description: 32 knots from the North
+          input:
+            fPort: 1
+            bytes: [0, 32]
+          output:
+            data:
+              direction: 'N'
+              speed: 32
+    # Downlink encoder encodes JSON object into a binary data downlink (optional)
+    downlinkEncoder:
+      fileName: codec.js
+      # Examples (optional)
+      examples:
+        - description: Turn green
+          input:
+            data:
+              led: green
+          output:
+            bytes: [1]
+            fPort: 2
+    # Downlink decoder decodes the encoded downlink message (optional, must be symmetric with downlinkEncoder)
+    downlinkDecoder:
+      fileName: codec.js
+      # Examples (optional)
+      examples:
+        - description: Turn green
+          input:
+            fPort: 2
+            bytes: [1]
+          output:
+            data:
+              led: green
+    ```
+
+    The actual **Payload codec implementation** is in the referenced filename: `vendor/<vendor-id>/<codec-filename>`.
+
+    An example codec for a wind direction and speed sensor with controllable LED looks like this:
+
+    ```js
+    var directions = ["N", "E", "S", "W"];
+    var colors = ["red", "green"];
+
+    // input = { fPort: 1, bytes: [1, 62] }
+    function decodeUplink(input) {
+      switch (input.fPort) {
+      case 1:
+        return {
+          // Decoded data
+          data: {
+            direction: directions[input.bytes[0]],
+            speed: input.bytes[1]
+          }
+        }
+      default:
+        return {
+          errors: ["unknown FPort"]
+        }
+      }
+    }
+
+    // input = { data: { led: "green" } }
+    function encodeDownlink(input) {
+      var i = colors.indexOf(input.data.led);
+      if (i === -1) {
+        return {
+          errors: ["invalid LED color"]
+        }
+      }
+      return {
+        // LoRaWAN FPort used for the downlink message
+        fPort: 2,
+        // Encoded bytes
+        bytes: [i]
+      }
+    }
+
+    // input = { fPort: 2, bytes: [1] }
+    function decodeDownlink(input) {
+      switch (input.fPort) {
+      case 2:
+        return {
+          // Decoded downlink (must be symmetric with encodeDownlink)
+          data: {
+            led: colors[input.bytes[0]]
+          }
+        }
+      default:
+        return {
+          errors: ["invalid FPort"]
+        }
+      }
+    }
+    ```
+
+    #### Errors and Warnings
+
+    Scripts can return warnings and errors to inform the application layer of potential issues with the data or indicate that the payload is malformatted.
+
+    The warnings and errors are string arrays. If there are any errors, the message fails. Any warnings are added to the message.
+
+    Example warning:
+
+    ```js
+    // input = { fPort: 1, bytes: [1, 2, 3] }
+    function decodeUplink(input) {
+      var warnings = [];
+      var battery = input.bytes[0] << 8 | input.bytes[1];
+      if (battery < 2000) {
+        warnings.push("unreliable battery level");
+      }
+      return {
+        // Decoded data
+        data: {
+          battery: battery
+        },
+        // Warnings
+        warnings: warnings
+      }
+    }
+    ```
+
+    Example error:
+
+    ```js
+    function encodeDownlink(input) {
+      if (typeof input.data.gate !== 'boolean') {
+        return {
+          errors: [
+            "missing required field: gate"
+          ]
+        }
+      }
+      return {
+        fPort: 1,
+        bytes: [input.data.gate ? 1 : 0]
+      }
+    }
+    ```
+    ## Legal
+
+    The API is distributed under [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0). See `LICENSE` for more information.
+
+    All product names, logos, and brands are property of their respective owners. All company, product and service names used in the Device Repository are for identification purposes only. Use of these names, logos, and brands does not imply endorsement.
+  package-lock.json: |
+    {
+      "name": "lorawan-devices",
+      "version": "1.0.0",
+      "lockfileVersion": 2,
+      "requires": true,
+      "packages": {
+        "": {
+          "name": "lorawan-devices",
+          "version": "1.0.0",
+          "license": "Apache-2.0",
+          "dependencies": {
+            "image-size": "^0.9.7",
+            "image-type": "^4.1.0",
+            "js-yaml": "^4.1.0",
+            "lodash.isequal": "^4.5.0",
+            "read-chunk": "^3.2.0",
+            "yargs": "^16.2.0"
+          },
+          "bin": {
+            "validate": "bin/validate.js"
+          },
+          "devDependencies": {
+            "ajv": "^6.12.6",
+            "ajv-cli": "^5.0.0",
+            "prettier": "^2.6.2"
+          }
+        },
+        "node_modules/ajv": {
+          "version": "6.12.6",
+          "resolved": "https://registry.npmjs.org/ajv/-/ajv-6.12.6.tgz",
+          "integrity": "sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==",
+          "dev": true,
+          "dependencies": {
+            "fast-deep-equal": "^3.1.1",
+            "fast-json-stable-stringify": "^2.0.0",
+            "json-schema-traverse": "^0.4.1",
+            "uri-js": "^4.2.2"
+          },
+          "funding": {
+            "type": "github",
+            "url": "https://github.com/sponsors/epoberezkin"
+          }
+        },
+        "node_modules/ajv-cli": {
+          "version": "5.0.0",
+          "resolved": "https://registry.npmjs.org/ajv-cli/-/ajv-cli-5.0.0.tgz",
+          "integrity": "sha512-LY4m6dUv44HTyhV+u2z5uX4EhPYTM38Iv1jdgDJJJCyOOuqB8KtZEGjPZ2T+sh5ZIJrXUfgErYx/j3gLd3+PlQ==",
+          "dev": true,
+          "dependencies": {
+            "ajv": "^8.0.0",
+            "fast-json-patch": "^2.0.0",
+            "glob": "^7.1.0",
+            "js-yaml": "^3.14.0",
+            "json-schema-migrate": "^2.0.0",
+            "json5": "^2.1.3",
+            "minimist": "^1.2.0"
+          },
+          "bin": {
+            "ajv": "dist/index.js"
+          },
+          "peerDependencies": {
+            "ts-node": ">=9.0.0"
+          },
+          "peerDependenciesMeta": {
+            "ts-node": {
+              "optional": true
+            }
+          }
+        },
+        "node_modules/ajv-cli/node_modules/ajv": {
+          "version": "8.11.0",
+          "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.11.0.tgz",
+          "integrity": "sha512-wGgprdCvMalC0BztXvitD2hC04YffAvtsUn93JbGXYLAtCUO4xd17mCCZQxUOItiBwZvJScWo8NIvQMQ71rdpg==",
+          "dev": true,
+          "dependencies": {
+            "fast-deep-equal": "^3.1.1",
+            "json-schema-traverse": "^1.0.0",
+            "require-from-string": "^2.0.2",
+            "uri-js": "^4.2.2"
+          },
+          "funding": {
+            "type": "github",
+            "url": "https://github.com/sponsors/epoberezkin"
+          }
+        },
+        "node_modules/ajv-cli/node_modules/argparse": {
+          "version": "1.0.10",
+          "resolved": "https://registry.npmjs.org/argparse/-/argparse-1.0.10.tgz",
+          "integrity": "sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==",
+          "dev": true,
+          "dependencies": {
+            "sprintf-js": "~1.0.2"
+          }
+        },
+        "node_modules/ajv-cli/node_modules/js-yaml": {
+          "version": "3.14.1",
+          "resolved": "https://registry.npmjs.org/js-yaml/-/js-yaml-3.14.1.tgz",
+          "integrity": "sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==",
+          "dev": true,
+          "dependencies": {
+            "argparse": "^1.0.7",
+            "esprima": "^4.0.0"
+          },
+          "bin": {
+            "js-yaml": "bin/js-yaml.js"
+          }
+        },
+        "node_modules/ajv-cli/node_modules/json-schema-traverse": {
+          "version": "1.0.0",
+          "resolved": "https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz",
+          "integrity": "sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==",
+          "dev": true
+        },
+        "node_modules/ansi-regex": {
+          "version": "5.0.1",
+          "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz",
+          "integrity": "sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==",
+          "engines": {
+            "node": ">=8"
+          }
+        },
+        "node_modules/ansi-styles": {
+          "version": "4.3.0",
+          "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz",
+          "integrity": "sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==",
+          "dependencies": {
+            "color-convert": "^2.0.1"
+          },
+          "engines": {
+            "node": ">=8"
+          },
+          "funding": {
+            "url": "https://github.com/chalk/ansi-styles?sponsor=1"
+          }
+        },
+        "node_modules/argparse": {
+          "version": "2.0.1",
+          "resolved": "https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz",
+          "integrity": "sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q=="
+        },
+        "node_modules/balanced-match": {
+          "version": "1.0.2",
+          "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz",
+          "integrity": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==",
+          "dev": true
+        },
+        "node_modules/brace-expansion": {
+          "version": "1.1.11",
+          "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
+          "integrity": "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==",
+          "dev": true,
+          "dependencies": {
+            "balanced-match": "^1.0.0",
+            "concat-map": "0.0.1"
+          }
+        },
+        "node_modules/cliui": {
+          "version": "7.0.4",
+          "resolved": "https://registry.npmjs.org/cliui/-/cliui-7.0.4.tgz",
+          "integrity": "sha512-OcRE68cOsVMXp1Yvonl/fzkQOyjLSu/8bhPDfQt0e0/Eb283TKP20Fs2MqoPsr9SwA595rRCA+QMzYc9nBP+JQ==",
+          "dependencies": {
+            "string-width": "^4.2.0",
+            "strip-ansi": "^6.0.0",
+            "wrap-ansi": "^7.0.0"
+          }
+        },
+        "node_modules/color-convert": {
+          "version": "2.0.1",
+          "resolved": "https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz",
+          "integrity": "sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==",
+          "dependencies": {
+            "color-name": "~1.1.4"
+          },
+          "engines": {
+            "node": ">=7.0.0"
+          }
+        },
+        "node_modules/color-name": {
+          "version": "1.1.4",
+          "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz",
+          "integrity": "sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA=="
+        },
+        "node_modules/concat-map": {
+          "version": "0.0.1",
+          "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
+          "integrity": "sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=",
+          "dev": true
+        },
+        "node_modules/emoji-regex": {
+          "version": "8.0.0",
+          "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz",
+          "integrity": "sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A=="
+        },
+        "node_modules/escalade": {
+          "version": "3.1.1",
+          "resolved": "https://registry.npmjs.org/escalade/-/escalade-3.1.1.tgz",
+          "integrity": "sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==",
+          "engines": {
+            "node": ">=6"
+          }
+        },
+        "node_modules/esprima": {
+          "version": "4.0.1",
+          "resolved": "https://registry.npmjs.org/esprima/-/esprima-4.0.1.tgz",
+          "integrity": "sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==",
+          "dev": true,
+          "bin": {
+            "esparse": "bin/esparse.js",
+            "esvalidate": "bin/esvalidate.js"
+          },
+          "engines": {
+            "node": ">=4"
+          }
+        },
+        "node_modules/fast-deep-equal": {
+          "version": "3.1.3",
+          "resolved": "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz",
+          "integrity": "sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==",
+          "dev": true
+        },
+        "node_modules/fast-json-patch": {
+          "version": "2.2.1",
+          "resolved": "https://registry.npmjs.org/fast-json-patch/-/fast-json-patch-2.2.1.tgz",
+          "integrity": "sha512-4j5uBaTnsYAV5ebkidvxiLUYOwjQ+JSFljeqfTxCrH9bDmlCQaOJFS84oDJ2rAXZq2yskmk3ORfoP9DCwqFNig==",
+          "dev": true,
+          "dependencies": {
+            "fast-deep-equal": "^2.0.1"
+          },
+          "engines": {
+            "node": ">= 0.4.0"
+          }
+        },
+        "node_modules/fast-json-patch/node_modules/fast-deep-equal": {
+          "version": "2.0.1",
+          "resolved": "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz",
+          "integrity": "sha1-ewUhjd+WZ79/Nwv3/bLLFf3Qqkk=",
+          "dev": true
+        },
+        "node_modules/fast-json-stable-stringify": {
+          "version": "2.1.0",
+          "resolved": "https://registry.npmjs.org/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz",
+          "integrity": "sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==",
+          "dev": true
+        },
+        "node_modules/file-type": {
+          "version": "10.11.0",
+          "resolved": "https://registry.npmjs.org/file-type/-/file-type-10.11.0.tgz",
+          "integrity": "sha512-uzk64HRpUZyTGZtVuvrjP0FYxzQrBf4rojot6J65YMEbwBLB0CWm0CLojVpwpmFmxcE/lkvYICgfcGozbBq6rw==",
+          "engines": {
+            "node": ">=6"
+          }
+        },
+        "node_modules/fs.realpath": {
+          "version": "1.0.0",
+          "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
+          "integrity": "sha1-FQStJSMVjKpA20onh8sBQRmU6k8=",
+          "dev": true
+        },
+        "node_modules/get-caller-file": {
+          "version": "2.0.5",
+          "resolved": "https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz",
+          "integrity": "sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==",
+          "engines": {
+            "node": "6.* || 8.* || >= 10.*"
+          }
+        },
+        "node_modules/glob": {
+          "version": "7.2.0",
+          "resolved": "https://registry.npmjs.org/glob/-/glob-7.2.0.tgz",
+          "integrity": "sha512-lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==",
+          "dev": true,
+          "dependencies": {
+            "fs.realpath": "^1.0.0",
+            "inflight": "^1.0.4",
+            "inherits": "2",
+            "minimatch": "^3.0.4",
+            "once": "^1.3.0",
+            "path-is-absolute": "^1.0.0"
+          },
+          "engines": {
+            "node": "*"
+          },
+          "funding": {
+            "url": "https://github.com/sponsors/isaacs"
+          }
+        },
+        "node_modules/image-size": {
+          "version": "0.9.7",
+          "resolved": "https://registry.npmjs.org/image-size/-/image-size-0.9.7.tgz",
+          "integrity": "sha512-KRVgLNZkr00YGN0qn9MlIrmlxbRhsCcEb1Byq3WKGnIV4M48iD185cprRtaoK4t5iC+ym2Q5qlArxZ/V1yzDgA==",
+          "dependencies": {
+            "queue": "6.0.2"
+          },
+          "bin": {
+            "image-size": "bin/image-size.js"
+          },
+          "engines": {
+            "node": ">=10.18.0"
+          }
+        },
+        "node_modules/image-type": {
+          "version": "4.1.0",
+          "resolved": "https://registry.npmjs.org/image-type/-/image-type-4.1.0.tgz",
+          "integrity": "sha512-CFJMJ8QK8lJvRlTCEgarL4ro6hfDQKif2HjSvYCdQZESaIPV4v9imrf7BQHK+sQeTeNeMpWciR9hyC/g8ybXEg==",
+          "dependencies": {
+            "file-type": "^10.10.0"
+          },
+          "engines": {
+            "node": ">=6"
+          }
+        },
+        "node_modules/inflight": {
+          "version": "1.0.6",
+          "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
+          "integrity": "sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=",
+          "dev": true,
+          "dependencies": {
+            "once": "^1.3.0",
+            "wrappy": "1"
+          }
+        },
+        "node_modules/inherits": {
+          "version": "2.0.4",
+          "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
+          "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ=="
+        },
+        "node_modules/is-fullwidth-code-point": {
+          "version": "3.0.0",
+          "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz",
+          "integrity": "sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==",
+          "engines": {
+            "node": ">=8"
+          }
+        },
+        "node_modules/js-yaml": {
+          "version": "4.1.0",
+          "resolved": "https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.0.tgz",
+          "integrity": "sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==",
+          "dependencies": {
+            "argparse": "^2.0.1"
+          },
+          "bin": {
+            "js-yaml": "bin/js-yaml.js"
+          }
+        },
+        "node_modules/json-schema-migrate": {
+          "version": "2.0.0",
+          "resolved": "https://registry.npmjs.org/json-schema-migrate/-/json-schema-migrate-2.0.0.tgz",
+          "integrity": "sha512-r38SVTtojDRp4eD6WsCqiE0eNDt4v1WalBXb9cyZYw9ai5cGtBwzRNWjHzJl38w6TxFkXAIA7h+fyX3tnrAFhQ==",
+          "dev": true,
+          "dependencies": {
+            "ajv": "^8.0.0"
+          }
+        },
+        "node_modules/json-schema-migrate/node_modules/ajv": {
+          "version": "8.11.0",
+          "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.11.0.tgz",
+          "integrity": "sha512-wGgprdCvMalC0BztXvitD2hC04YffAvtsUn93JbGXYLAtCUO4xd17mCCZQxUOItiBwZvJScWo8NIvQMQ71rdpg==",
+          "dev": true,
+          "dependencies": {
+            "fast-deep-equal": "^3.1.1",
+            "json-schema-traverse": "^1.0.0",
+            "require-from-string": "^2.0.2",
+            "uri-js": "^4.2.2"
+          },
+          "funding": {
+            "type": "github",
+            "url": "https://github.com/sponsors/epoberezkin"
+          }
+        },
+        "node_modules/json-schema-migrate/node_modules/json-schema-traverse": {
+          "version": "1.0.0",
+          "resolved": "https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz",
+          "integrity": "sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==",
+          "dev": true
+        },
+        "node_modules/json-schema-traverse": {
+          "version": "0.4.1",
+          "resolved": "https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-0.4.1.tgz",
+          "integrity": "sha512-xbbCH5dCYU5T8LcEhhuh7HJ88HXuW3qsI3Y0zOZFKfZEHcpWiHU/Jxzk629Brsab/mMiHQti9wMP+845RPe3Vg==",
+          "dev": true
+        },
+        "node_modules/json5": {
+          "version": "2.2.1",
+          "resolved": "https://registry.npmjs.org/json5/-/json5-2.2.1.tgz",
+          "integrity": "sha512-1hqLFMSrGHRHxav9q9gNjJ5EXznIxGVO09xQRrwplcS8qs28pZ8s8hupZAmqDwZUmVZ2Qb2jnyPOWcDH8m8dlA==",
+          "dev": true,
+          "bin": {
+            "json5": "lib/cli.js"
+          },
+          "engines": {
+            "node": ">=6"
+          }
+        },
+        "node_modules/lodash.isequal": {
+          "version": "4.5.0",
+          "resolved": "https://registry.npmjs.org/lodash.isequal/-/lodash.isequal-4.5.0.tgz",
+          "integrity": "sha1-QVxEePK8wwEgwizhDtMib30+GOA="
+        },
+        "node_modules/minimatch": {
+          "version": "3.1.2",
+          "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz",
+          "integrity": "sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==",
+          "dev": true,
+          "dependencies": {
+            "brace-expansion": "^1.1.7"
+          },
+          "engines": {
+            "node": "*"
+          }
+        },
+        "node_modules/minimist": {
+          "version": "1.2.6",
+          "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz",
+          "integrity": "sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==",
+          "dev": true
+        },
+        "node_modules/once": {
+          "version": "1.4.0",
+          "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
+          "integrity": "sha1-WDsap3WWHUsROsF9nFC6753Xa9E=",
+          "dev": true,
+          "dependencies": {
+            "wrappy": "1"
+          }
+        },
+        "node_modules/p-finally": {
+          "version": "1.0.0",
+          "resolved": "https://registry.npmjs.org/p-finally/-/p-finally-1.0.0.tgz",
+          "integrity": "sha1-P7z7FbiZpEEjs0ttzBi3JDNqLK4=",
+          "engines": {
+            "node": ">=4"
+          }
+        },
+        "node_modules/p-try": {
+          "version": "2.2.0",
+          "resolved": "https://registry.npmjs.org/p-try/-/p-try-2.2.0.tgz",
+          "integrity": "sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==",
+          "engines": {
+            "node": ">=6"
+          }
+        },
+        "node_modules/path-is-absolute": {
+          "version": "1.0.1",
+          "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
+          "integrity": "sha1-F0uSaHNVNP+8es5r9TpanhtcX18=",
+          "dev": true,
+          "engines": {
+            "node": ">=0.10.0"
+          }
+        },
+        "node_modules/pify": {
+          "version": "4.0.1",
+          "resolved": "https://registry.npmjs.org/pify/-/pify-4.0.1.tgz",
+          "integrity": "sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==",
+          "engines": {
+            "node": ">=6"
+          }
+        },
+        "node_modules/prettier": {
+          "version": "2.6.2",
+          "resolved": "https://registry.npmjs.org/prettier/-/prettier-2.6.2.tgz",
+          "integrity": "sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==",
+          "dev": true,
+          "bin": {
+            "prettier": "bin-prettier.js"
+          },
+          "engines": {
+            "node": ">=10.13.0"
+          },
+          "funding": {
+            "url": "https://github.com/prettier/prettier?sponsor=1"
+          }
+        },
+        "node_modules/punycode": {
+          "version": "2.1.1",
+          "resolved": "https://registry.npmjs.org/punycode/-/punycode-2.1.1.tgz",
+          "integrity": "sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==",
+          "dev": true,
+          "engines": {
+            "node": ">=6"
+          }
+        },
+        "node_modules/queue": {
+          "version": "6.0.2",
+          "resolved": "https://registry.npmjs.org/queue/-/queue-6.0.2.tgz",
+          "integrity": "sha512-iHZWu+q3IdFZFX36ro/lKBkSvfkztY5Y7HMiPlOUjhupPcG2JMfst2KKEpu5XndviX/3UhFbRngUPNKtgvtZiA==",
+          "dependencies": {
+            "inherits": "~2.0.3"
+          }
+        },
+        "node_modules/read-chunk": {
+          "version": "3.2.0",
+          "resolved": "https://registry.npmjs.org/read-chunk/-/read-chunk-3.2.0.tgz",
+          "integrity": "sha512-CEjy9LCzhmD7nUpJ1oVOE6s/hBkejlcJEgLQHVnQznOSilOPb+kpKktlLfFDK3/WP43+F80xkUTM2VOkYoSYvQ==",
+          "dependencies": {
+            "pify": "^4.0.1",
+            "with-open-file": "^0.1.6"
+          },
+          "engines": {
+            "node": ">=6"
+          }
+        },
+        "node_modules/require-directory": {
+          "version": "2.1.1",
+          "resolved": "https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz",
+          "integrity": "sha1-jGStX9MNqxyXbiNE/+f3kqam30I=",
+          "engines": {
+            "node": ">=0.10.0"
+          }
+        },
+        "node_modules/require-from-string": {
+          "version": "2.0.2",
+          "resolved": "https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz",
+          "integrity": "sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==",
+          "dev": true,
+          "engines": {
+            "node": ">=0.10.0"
+          }
+        },
+        "node_modules/sprintf-js": {
+          "version": "1.0.3",
+          "resolved": "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz",
+          "integrity": "sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=",
+          "dev": true
+        },
+        "node_modules/string-width": {
+          "version": "4.2.3",
+          "resolved": "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz",
+          "integrity": "sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==",
+          "dependencies": {
+            "emoji-regex": "^8.0.0",
+            "is-fullwidth-code-point": "^3.0.0",
+            "strip-ansi": "^6.0.1"
+          },
+          "engines": {
+            "node": ">=8"
+          }
+        },
+        "node_modules/strip-ansi": {
+          "version": "6.0.1",
+          "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz",
+          "integrity": "sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==",
+          "dependencies": {
+            "ansi-regex": "^5.0.1"
+          },
+          "engines": {
+            "node": ">=8"
+          }
+        },
+        "node_modules/uri-js": {
+          "version": "4.4.1",
+          "resolved": "https://registry.npmjs.org/uri-js/-/uri-js-4.4.1.tgz",
+          "integrity": "sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==",
+          "dev": true,
+          "dependencies": {
+            "punycode": "^2.1.0"
+          }
+        },
+        "node_modules/with-open-file": {
+          "version": "0.1.7",
+          "resolved": "https://registry.npmjs.org/with-open-file/-/with-open-file-0.1.7.tgz",
+          "integrity": "sha512-ecJS2/oHtESJ1t3ZfMI3B7KIDKyfN0O16miWxdn30zdh66Yd3LsRFebXZXq6GU4xfxLf6nVxp9kIqElb5fqczA==",
+          "dependencies": {
+            "p-finally": "^1.0.0",
+            "p-try": "^2.1.0",
+            "pify": "^4.0.1"
+          },
+          "engines": {
+            "node": ">=6"
+          }
+        },
+        "node_modules/wrap-ansi": {
+          "version": "7.0.0",
+          "resolved": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz",
+          "integrity": "sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==",
+          "dependencies": {
+            "ansi-styles": "^4.0.0",
+            "string-width": "^4.1.0",
+            "strip-ansi": "^6.0.0"
+          },
+          "engines": {
+            "node": ">=10"
+          },
+          "funding": {
+            "url": "https://github.com/chalk/wrap-ansi?sponsor=1"
+          }
+        },
+        "node_modules/wrappy": {
+          "version": "1.0.2",
+          "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+          "integrity": "sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=",
+          "dev": true
+        },
+        "node_modules/y18n": {
+          "version": "5.0.8",
+          "resolved": "https://registry.npmjs.org/y18n/-/y18n-5.0.8.tgz",
+          "integrity": "sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==",
+          "engines": {
+            "node": ">=10"
+          }
+        },
+        "node_modules/yargs": {
+          "version": "16.2.0",
+          "resolved": "https://registry.npmjs.org/yargs/-/yargs-16.2.0.tgz",
+          "integrity": "sha512-D1mvvtDG0L5ft/jGWkLpG1+m0eQxOfaBvTNELraWj22wSVUMWxZUvYgJYcKh6jGGIkJFhH4IZPQhR4TKpc8mBw==",
+          "dependencies": {
+            "cliui": "^7.0.2",
+            "escalade": "^3.1.1",
+            "get-caller-file": "^2.0.5",
+            "require-directory": "^2.1.1",
+            "string-width": "^4.2.0",
+            "y18n": "^5.0.5",
+            "yargs-parser": "^20.2.2"
+          },
+          "engines": {
+            "node": ">=10"
+          }
+        },
+        "node_modules/yargs-parser": {
+          "version": "20.2.9",
+          "resolved": "https://registry.npmjs.org/yargs-parser/-/yargs-parser-20.2.9.tgz",
+          "integrity": "sha512-y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w==",
+          "engines": {
+            "node": ">=10"
+          }
+        }
+      },
+      "dependencies": {
+        "ajv": {
+          "version": "6.12.6",
+          "resolved": "https://registry.npmjs.org/ajv/-/ajv-6.12.6.tgz",
+          "integrity": "sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==",
+          "dev": true,
+          "requires": {
+            "fast-deep-equal": "^3.1.1",
+            "fast-json-stable-stringify": "^2.0.0",
+            "json-schema-traverse": "^0.4.1",
+            "uri-js": "^4.2.2"
+          }
+        },
+        "ajv-cli": {
+          "version": "5.0.0",
+          "resolved": "https://registry.npmjs.org/ajv-cli/-/ajv-cli-5.0.0.tgz",
+          "integrity": "sha512-LY4m6dUv44HTyhV+u2z5uX4EhPYTM38Iv1jdgDJJJCyOOuqB8KtZEGjPZ2T+sh5ZIJrXUfgErYx/j3gLd3+PlQ==",
+          "dev": true,
+          "requires": {
+            "ajv": "^8.0.0",
+            "fast-json-patch": "^2.0.0",
+            "glob": "^7.1.0",
+            "js-yaml": "^3.14.0",
+            "json-schema-migrate": "^2.0.0",
+            "json5": "^2.1.3",
+            "minimist": "^1.2.0"
+          },
+          "dependencies": {
+            "ajv": {
+              "version": "8.11.0",
+              "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.11.0.tgz",
+              "integrity": "sha512-wGgprdCvMalC0BztXvitD2hC04YffAvtsUn93JbGXYLAtCUO4xd17mCCZQxUOItiBwZvJScWo8NIvQMQ71rdpg==",
+              "dev": true,
+              "requires": {
+                "fast-deep-equal": "^3.1.1",
+                "json-schema-traverse": "^1.0.0",
+                "require-from-string": "^2.0.2",
+                "uri-js": "^4.2.2"
+              }
+            },
+            "argparse": {
+              "version": "1.0.10",
+              "resolved": "https://registry.npmjs.org/argparse/-/argparse-1.0.10.tgz",
+              "integrity": "sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==",
+              "dev": true,
+              "requires": {
+                "sprintf-js": "~1.0.2"
+              }
+            },
+            "js-yaml": {
+              "version": "3.14.1",
+              "resolved": "https://registry.npmjs.org/js-yaml/-/js-yaml-3.14.1.tgz",
+              "integrity": "sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==",
+              "dev": true,
+              "requires": {
+                "argparse": "^1.0.7",
+                "esprima": "^4.0.0"
+              }
+            },
+            "json-schema-traverse": {
+              "version": "1.0.0",
+              "resolved": "https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz",
+              "integrity": "sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==",
+              "dev": true
+            }
+          }
+        },
+        "ansi-regex": {
+          "version": "5.0.1",
+          "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz",
+          "integrity": "sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ=="
+        },
+        "ansi-styles": {
+          "version": "4.3.0",
+          "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz",
+          "integrity": "sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==",
+          "requires": {
+            "color-convert": "^2.0.1"
+          }
+        },
+        "argparse": {
+          "version": "2.0.1",
+          "resolved": "https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz",
+          "integrity": "sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q=="
+        },
+        "balanced-match": {
+          "version": "1.0.2",
+          "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz",
+          "integrity": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==",
+          "dev": true
+        },
+        "brace-expansion": {
+          "version": "1.1.11",
+          "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
+          "integrity": "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==",
+          "dev": true,
+          "requires": {
+            "balanced-match": "^1.0.0",
+            "concat-map": "0.0.1"
+          }
+        },
+        "cliui": {
+          "version": "7.0.4",
+          "resolved": "https://registry.npmjs.org/cliui/-/cliui-7.0.4.tgz",
+          "integrity": "sha512-OcRE68cOsVMXp1Yvonl/fzkQOyjLSu/8bhPDfQt0e0/Eb283TKP20Fs2MqoPsr9SwA595rRCA+QMzYc9nBP+JQ==",
+          "requires": {
+            "string-width": "^4.2.0",
+            "strip-ansi": "^6.0.0",
+            "wrap-ansi": "^7.0.0"
+          }
+        },
+        "color-convert": {
+          "version": "2.0.1",
+          "resolved": "https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz",
+          "integrity": "sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==",
+          "requires": {
+            "color-name": "~1.1.4"
+          }
+        },
+        "color-name": {
+          "version": "1.1.4",
+          "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz",
+          "integrity": "sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA=="
+        },
+        "concat-map": {
+          "version": "0.0.1",
+          "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
+          "integrity": "sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=",
+          "dev": true
+        },
+        "emoji-regex": {
+          "version": "8.0.0",
+          "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz",
+          "integrity": "sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A=="
+        },
+        "escalade": {
+          "version": "3.1.1",
+          "resolved": "https://registry.npmjs.org/escalade/-/escalade-3.1.1.tgz",
+          "integrity": "sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw=="
+        },
+        "esprima": {
+          "version": "4.0.1",
+          "resolved": "https://registry.npmjs.org/esprima/-/esprima-4.0.1.tgz",
+          "integrity": "sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==",
+          "dev": true
+        },
+        "fast-deep-equal": {
+          "version": "3.1.3",
+          "resolved": "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz",
+          "integrity": "sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==",
+          "dev": true
+        },
+        "fast-json-patch": {
+          "version": "2.2.1",
+          "resolved": "https://registry.npmjs.org/fast-json-patch/-/fast-json-patch-2.2.1.tgz",
+          "integrity": "sha512-4j5uBaTnsYAV5ebkidvxiLUYOwjQ+JSFljeqfTxCrH9bDmlCQaOJFS84oDJ2rAXZq2yskmk3ORfoP9DCwqFNig==",
+          "dev": true,
+          "requires": {
+            "fast-deep-equal": "^2.0.1"
+          },
+          "dependencies": {
+            "fast-deep-equal": {
+              "version": "2.0.1",
+              "resolved": "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz",
+              "integrity": "sha1-ewUhjd+WZ79/Nwv3/bLLFf3Qqkk=",
+              "dev": true
+            }
+          }
+        },
+        "fast-json-stable-stringify": {
+          "version": "2.1.0",
+          "resolved": "https://registry.npmjs.org/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz",
+          "integrity": "sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==",
+          "dev": true
+        },
+        "file-type": {
+          "version": "10.11.0",
+          "resolved": "https://registry.npmjs.org/file-type/-/file-type-10.11.0.tgz",
+          "integrity": "sha512-uzk64HRpUZyTGZtVuvrjP0FYxzQrBf4rojot6J65YMEbwBLB0CWm0CLojVpwpmFmxcE/lkvYICgfcGozbBq6rw=="
+        },
+        "fs.realpath": {
+          "version": "1.0.0",
+          "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
+          "integrity": "sha1-FQStJSMVjKpA20onh8sBQRmU6k8=",
+          "dev": true
+        },
+        "get-caller-file": {
+          "version": "2.0.5",
+          "resolved": "https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz",
+          "integrity": "sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg=="
+        },
+        "glob": {
+          "version": "7.2.0",
+          "resolved": "https://registry.npmjs.org/glob/-/glob-7.2.0.tgz",
+          "integrity": "sha512-lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==",
+          "dev": true,
+          "requires": {
+            "fs.realpath": "^1.0.0",
+            "inflight": "^1.0.4",
+            "inherits": "2",
+            "minimatch": "^3.0.4",
+            "once": "^1.3.0",
+            "path-is-absolute": "^1.0.0"
+          }
+        },
+        "image-size": {
+          "version": "0.9.7",
+          "resolved": "https://registry.npmjs.org/image-size/-/image-size-0.9.7.tgz",
+          "integrity": "sha512-KRVgLNZkr00YGN0qn9MlIrmlxbRhsCcEb1Byq3WKGnIV4M48iD185cprRtaoK4t5iC+ym2Q5qlArxZ/V1yzDgA==",
+          "requires": {
+            "queue": "6.0.2"
+          }
+        },
+        "image-type": {
+          "version": "4.1.0",
+          "resolved": "https://registry.npmjs.org/image-type/-/image-type-4.1.0.tgz",
+          "integrity": "sha512-CFJMJ8QK8lJvRlTCEgarL4ro6hfDQKif2HjSvYCdQZESaIPV4v9imrf7BQHK+sQeTeNeMpWciR9hyC/g8ybXEg==",
+          "requires": {
+            "file-type": "^10.10.0"
+          }
+        },
+        "inflight": {
+          "version": "1.0.6",
+          "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
+          "integrity": "sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=",
+          "dev": true,
+          "requires": {
+            "once": "^1.3.0",
+            "wrappy": "1"
+          }
+        },
+        "inherits": {
+          "version": "2.0.4",
+          "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
+          "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ=="
+        },
+        "is-fullwidth-code-point": {
+          "version": "3.0.0",
+          "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz",
+          "integrity": "sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg=="
+        },
+        "js-yaml": {
+          "version": "4.1.0",
+          "resolved": "https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.0.tgz",
+          "integrity": "sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==",
+          "requires": {
+            "argparse": "^2.0.1"
+          }
+        },
+        "json-schema-migrate": {
+          "version": "2.0.0",
+          "resolved": "https://registry.npmjs.org/json-schema-migrate/-/json-schema-migrate-2.0.0.tgz",
+          "integrity": "sha512-r38SVTtojDRp4eD6WsCqiE0eNDt4v1WalBXb9cyZYw9ai5cGtBwzRNWjHzJl38w6TxFkXAIA7h+fyX3tnrAFhQ==",
+          "dev": true,
+          "requires": {
+            "ajv": "^8.0.0"
+          },
+          "dependencies": {
+            "ajv": {
+              "version": "8.11.0",
+              "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.11.0.tgz",
+              "integrity": "sha512-wGgprdCvMalC0BztXvitD2hC04YffAvtsUn93JbGXYLAtCUO4xd17mCCZQxUOItiBwZvJScWo8NIvQMQ71rdpg==",
+              "dev": true,
+              "requires": {
+                "fast-deep-equal": "^3.1.1",
+                "json-schema-traverse": "^1.0.0",
+                "require-from-string": "^2.0.2",
+                "uri-js": "^4.2.2"
+              }
+            },
+            "json-schema-traverse": {
+              "version": "1.0.0",
+              "resolved": "https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz",
+              "integrity": "sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==",
+              "dev": true
+            }
+          }
+        },
+        "json-schema-traverse": {
+          "version": "0.4.1",
+          "resolved": "https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-0.4.1.tgz",
+          "integrity": "sha512-xbbCH5dCYU5T8LcEhhuh7HJ88HXuW3qsI3Y0zOZFKfZEHcpWiHU/Jxzk629Brsab/mMiHQti9wMP+845RPe3Vg==",
+          "dev": true
+        },
+        "json5": {
+          "version": "2.2.1",
+          "resolved": "https://registry.npmjs.org/json5/-/json5-2.2.1.tgz",
+          "integrity": "sha512-1hqLFMSrGHRHxav9q9gNjJ5EXznIxGVO09xQRrwplcS8qs28pZ8s8hupZAmqDwZUmVZ2Qb2jnyPOWcDH8m8dlA==",
+          "dev": true
+        },
+        "lodash.isequal": {
+          "version": "4.5.0",
+          "resolved": "https://registry.npmjs.org/lodash.isequal/-/lodash.isequal-4.5.0.tgz",
+          "integrity": "sha1-QVxEePK8wwEgwizhDtMib30+GOA="
+        },
+        "minimatch": {
+          "version": "3.1.2",
+          "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz",
+          "integrity": "sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==",
+          "dev": true,
+          "requires": {
+            "brace-expansion": "^1.1.7"
+          }
+        },
+        "minimist": {
+          "version": "1.2.6",
+          "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz",
+          "integrity": "sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==",
+          "dev": true
+        },
+        "once": {
+          "version": "1.4.0",
+          "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
+          "integrity": "sha1-WDsap3WWHUsROsF9nFC6753Xa9E=",
+          "dev": true,
+          "requires": {
+            "wrappy": "1"
+          }
+        },
+        "p-finally": {
+          "version": "1.0.0",
+          "resolved": "https://registry.npmjs.org/p-finally/-/p-finally-1.0.0.tgz",
+          "integrity": "sha1-P7z7FbiZpEEjs0ttzBi3JDNqLK4="
+        },
+        "p-try": {
+          "version": "2.2.0",
+          "resolved": "https://registry.npmjs.org/p-try/-/p-try-2.2.0.tgz",
+          "integrity": "sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ=="
+        },
+        "path-is-absolute": {
+          "version": "1.0.1",
+          "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
+          "integrity": "sha1-F0uSaHNVNP+8es5r9TpanhtcX18=",
+          "dev": true
+        },
+        "pify": {
+          "version": "4.0.1",
+          "resolved": "https://registry.npmjs.org/pify/-/pify-4.0.1.tgz",
+          "integrity": "sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g=="
+        },
+        "prettier": {
+          "version": "2.6.2",
+          "resolved": "https://registry.npmjs.org/prettier/-/prettier-2.6.2.tgz",
+          "integrity": "sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==",
+          "dev": true
+        },
+        "punycode": {
+          "version": "2.1.1",
+          "resolved": "https://registry.npmjs.org/punycode/-/punycode-2.1.1.tgz",
+          "integrity": "sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==",
+          "dev": true
+        },
+        "queue": {
+          "version": "6.0.2",
+          "resolved": "https://registry.npmjs.org/queue/-/queue-6.0.2.tgz",
+          "integrity": "sha512-iHZWu+q3IdFZFX36ro/lKBkSvfkztY5Y7HMiPlOUjhupPcG2JMfst2KKEpu5XndviX/3UhFbRngUPNKtgvtZiA==",
+          "requires": {
+            "inherits": "~2.0.3"
+          }
+        },
+        "read-chunk": {
+          "version": "3.2.0",
+          "resolved": "https://registry.npmjs.org/read-chunk/-/read-chunk-3.2.0.tgz",
+          "integrity": "sha512-CEjy9LCzhmD7nUpJ1oVOE6s/hBkejlcJEgLQHVnQznOSilOPb+kpKktlLfFDK3/WP43+F80xkUTM2VOkYoSYvQ==",
+          "requires": {
+            "pify": "^4.0.1",
+            "with-open-file": "^0.1.6"
+          }
+        },
+        "require-directory": {
+          "version": "2.1.1",
+          "resolved": "https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz",
+          "integrity": "sha1-jGStX9MNqxyXbiNE/+f3kqam30I="
+        },
+        "require-from-string": {
+          "version": "2.0.2",
+          "resolved": "https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz",
+          "integrity": "sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==",
+          "dev": true
+        },
+        "sprintf-js": {
+          "version": "1.0.3",
+          "resolved": "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz",
+          "integrity": "sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=",
+          "dev": true
+        },
+        "string-width": {
+          "version": "4.2.3",
+          "resolved": "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz",
+          "integrity": "sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==",
+          "requires": {
+            "emoji-regex": "^8.0.0",
+            "is-fullwidth-code-point": "^3.0.0",
+            "strip-ansi": "^6.0.1"
+          }
+        },
+        "strip-ansi": {
+          "version": "6.0.1",
+          "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz",
+          "integrity": "sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==",
+          "requires": {
+            "ansi-regex": "^5.0.1"
+          }
+        },
+        "uri-js": {
+          "version": "4.4.1",
+          "resolved": "https://registry.npmjs.org/uri-js/-/uri-js-4.4.1.tgz",
+          "integrity": "sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==",
+          "dev": true,
+          "requires": {
+            "punycode": "^2.1.0"
+          }
+        },
+        "with-open-file": {
+          "version": "0.1.7",
+          "resolved": "https://registry.npmjs.org/with-open-file/-/with-open-file-0.1.7.tgz",
+          "integrity": "sha512-ecJS2/oHtESJ1t3ZfMI3B7KIDKyfN0O16miWxdn30zdh66Yd3LsRFebXZXq6GU4xfxLf6nVxp9kIqElb5fqczA==",
+          "requires": {
+            "p-finally": "^1.0.0",
+            "p-try": "^2.1.0",
+            "pify": "^4.0.1"
+          }
+        },
+        "wrap-ansi": {
+          "version": "7.0.0",
+          "resolved": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz",
+          "integrity": "sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==",
+          "requires": {
+            "ansi-styles": "^4.0.0",
+            "string-width": "^4.1.0",
+            "strip-ansi": "^6.0.0"
+          }
+        },
+        "wrappy": {
+          "version": "1.0.2",
+          "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+          "integrity": "sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=",
+          "dev": true
+        },
+        "y18n": {
+          "version": "5.0.8",
+          "resolved": "https://registry.npmjs.org/y18n/-/y18n-5.0.8.tgz",
+          "integrity": "sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA=="
+        },
+        "yargs": {
+          "version": "16.2.0",
+          "resolved": "https://registry.npmjs.org/yargs/-/yargs-16.2.0.tgz",
+          "integrity": "sha512-D1mvvtDG0L5ft/jGWkLpG1+m0eQxOfaBvTNELraWj22wSVUMWxZUvYgJYcKh6jGGIkJFhH4IZPQhR4TKpc8mBw==",
+          "requires": {
+            "cliui": "^7.0.2",
+            "escalade": "^3.1.1",
+            "get-caller-file": "^2.0.5",
+            "require-directory": "^2.1.1",
+            "string-width": "^4.2.0",
+            "y18n": "^5.0.5",
+            "yargs-parser": "^20.2.2"
+          }
+        },
+        "yargs-parser": {
+          "version": "20.2.9",
+          "resolved": "https://registry.npmjs.org/yargs-parser/-/yargs-parser-20.2.9.tgz",
+          "integrity": "sha512-y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w=="
+        }
+      }
+    }
+  package.json: |
+    {
+      "name": "lorawan-devices",
+      "version": "1.0.0",
+      "description": "LoRaWAN Device Repository",
+      "bin": {
+        "validate": "bin/validate.js"
+      },
+      "scripts": {
+        "validate": "node bin/validate.js",
+        "format": "prettier --write schema.json \"vendor/**/*.yaml\" \"bin/**/*.js\""
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TheThingsNetwork/lorawan-devices.git"
+      },
+      "author": "The Things Network Foundation",
+      "license": "Apache-2.0",
+      "bugs": {
+        "url": "https://github.com/TheThingsNetwork/lorawan-devices/issues"
+      },
+      "homepage": "https://github.com/TheThingsNetwork/lorawan-devices#readme",
+      "devDependencies": {
+        "ajv": "^6.12.6",
+        "ajv-cli": "^5.0.0",
+        "prettier": "^2.6.2"
+      },
+      "dependencies": {
+        "image-size": "^0.9.7",
+        "image-type": "^4.1.0",
+        "js-yaml": "^4.1.0",
+        "lodash.isequal": "^4.5.0",
+        "read-chunk": "^3.2.0",
+        "yargs": "^16.2.0"
+      }
+    }
+  schema.json: |
+    {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "$id": "https://schema.thethings.network/devicerepository/1/schema",
+      "title": "LoRaWAN Device Repository",
+      "description": "Open source repository for LoRaWAN end devices and gateways",
+      "definitions": {
+        "vendors": {
+          "type": "object",
+          "properties": {
+            "vendors": {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  {
+                    "$ref": "https://lorawan-schema.org/draft/devices/1/schema#/definitions/vendor"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "draft": {
+                        "type": "boolean",
+                        "description": "If draft, the vendor is not listed"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "vendor": {
+          "type": "object",
+          "properties": {
+            "endDevices": {
+              "type": "array",
+              "items": {
+                "$ref": "https://lorawan-schema.org/draft/devices/1/schema#/definitions/identifier"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "anyOf": [
+        {
+          "$ref": "https://lorawan-schema.org/draft/devices/1/schema#/definitions/endDevice"
+        },
+        {
+          "$ref": "https://lorawan-schema.org/draft/devices/1/schema#/definitions/endDeviceProfile"
+        },
+        { "$ref": "#/definitions/vendors" },
+        { "$ref": "#/definitions/vendor" }
+      ]
+    }
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: chirpstack
+  name: chirpstack-cm1

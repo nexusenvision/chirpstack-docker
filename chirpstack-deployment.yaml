@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.1 (a9d05d509)
+    kompose.volume.type: configMap
+  creationTimestamp: null
+  labels:
+    io.kompose.service: chirpstack
+  name: chirpstack
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      io.kompose.service: chirpstack
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.26.1 (a9d05d509)
+        kompose.volume.type: configMap
+      creationTimestamp: null
+      labels:
+        io.kompose.service: chirpstack
+    spec:
+      containers:
+        - args:
+            - -c
+            - /etc/chirpstack
+          image: chirpstack/chirpstack:4.0.0-test.7
+          name: chirpstack
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              cpu: 500m
+              memory: "52428800"
+          volumeMounts:
+            - mountPath: /run/secrets/my_secret
+              name: my_secret
+            - mountPath: /etc/chirpstack
+              name: chirpstack-cm0
+            - mountPath: /opt/lorawan-devices
+              name: chirpstack-cm1
+      restartPolicy: Always
+      volumes:
+        - name: my_secret
+          secret:
+            items:
+              - key: my_secret
+                path: my_secret
+            secretName: my_secret
+        - configMap:
+            name: chirpstack-cm0
+          name: chirpstack-cm0
+        - configMap:
+            name: chirpstack-cm1
+          name: chirpstack-cm1
+status: {}

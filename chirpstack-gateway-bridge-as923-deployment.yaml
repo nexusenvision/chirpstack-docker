@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.1 (a9d05d509)
+    kompose.volume.type: configMap
+  creationTimestamp: null
+  labels:
+    io.kompose.service: chirpstack-gateway-bridge-as923
+  name: chirpstack-gateway-bridge-as923
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: chirpstack-gateway-bridge-as923
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.26.1 (a9d05d509)
+        kompose.volume.type: configMap
+      creationTimestamp: null
+      labels:
+        io.kompose.service: chirpstack-gateway-bridge-as923
+    spec:
+      containers:
+        - image: chirpstack/chirpstack-gateway-bridge:3
+          name: chirpstack-gateway-bridge-as923
+          ports:
+            - containerPort: 1701
+          resources:
+            limits:
+              cpu: 500m
+              memory: "52428800"
+          volumeMounts:
+            - mountPath: /etc/chirpstack-gateway-bridge
+              name: chirpstack-gateway-bridge-as923-cm0
+      restartPolicy: Always
+      volumes:
+        - configMap:
+            name: chirpstack-gateway-bridge-as923-cm0
+          name: chirpstack-gateway-bridge-as923-cm0
+status: {}

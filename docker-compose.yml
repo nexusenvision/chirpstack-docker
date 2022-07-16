@@ -1,13 +1,27 @@
-version: "3"
+version: "3.3"
 
 services:
   chirpstack:
     image: chirpstack/chirpstack:4.0.0-test.7
+    deploy:
+      mode: replicated
+      replicas: 2
+      endpoint_mode: vip
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 50M
+
+
     command: -c /etc/chirpstack
-    restart: unless-stopped
+    restart: always
     volumes:
       - ./configuration/chirpstack:/etc/chirpstack
       - ./lorawan-devices:/opt/lorawan-devices
+    links:
+      - redis
+      - postgres
+      - mosquitto
 
     depends_on:
       - postgres
@@ -18,17 +32,38 @@ services:
     secrets:
       - my_secret
     labels:
-      io.kompose.volume.type: configMap
+      kompose.volume.type: configMap
   chirpstack-gateway-bridge-eu868:
     image: chirpstack/chirpstack-gateway-bridge:3
     ports:
-      - 1700:1700/udp
+      - 1700:1700
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 50M
     volumes:
       - ./configuration/chirpstack-gateway-bridge:/etc/chirpstack-gateway-bridge
     depends_on: 
       - mosquitto
     labels:
-      io.kompose.volume.type: configMap
+      kompose.volume.type: configMap
+
+  chirpstack-gateway-bridge-as923:
+    image: chirpstack/chirpstack-gateway-bridge:3
+    ports:
+      - 1701:1701
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 50M
+    volumes:
+      - ./configuration/chirpstack-gateway-bridge-as923:/etc/chirpstack-gateway-bridge
+    depends_on: 
+      - mosquitto
+    labels:
+      kompose.volume.type: configMap
 
   postgres:
     image: postgres:11-alpine
@@ -41,7 +76,7 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=root
     labels:
-      io.kompose.volume.type: configMap
+      kompose.volume.type: hostPath
 
   redis:
     image: redis:6-alpine
@@ -50,7 +85,7 @@ services:
     volumes:
       - redisdata:/data
     labels:
-      io.kompose.volume.type: configMap
+      kompose.volume.type: persistentVolumeClaim
     
 
 
@@ -61,7 +96,7 @@ services:
     volumes: 
       - ./configuration/eclipse-mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
     labels:
-      io.kompose.volume.type: configMap
+      kompose.volume.type: configMap
 
 volumes:
   postgresqldata:
