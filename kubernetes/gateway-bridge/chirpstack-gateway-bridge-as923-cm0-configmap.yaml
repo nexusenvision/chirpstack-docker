@@ -15,7 +15,7 @@ data:
     command_topic_template="as923/gateway/{{ .GatewayID }}/command/#"
 kind: ConfigMap
 metadata:
-  creationTimestamp: null
+  creationTimestamp: 2022-07-17T07:20:50.52Z
   labels:
     io.kompose.service: chirpstack-gateway-bridge-as923
   name: chirpstack-gateway-bridge-as923-cm0

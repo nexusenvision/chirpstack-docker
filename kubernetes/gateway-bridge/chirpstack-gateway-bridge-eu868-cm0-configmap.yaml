@@ -15,7 +15,7 @@ data:
     command_topic_template="eu868/gateway/{{ .GatewayID }}/command/#"
 kind: ConfigMap
 metadata:
-  creationTimestamp: null
+  creationTimestamp: 2022-07-17T07:20:50.52Z
   labels:
     io.kompose.service: chirpstack-gateway-bridge-eu868
   name: chirpstack-gateway-bridge-eu868-cm0

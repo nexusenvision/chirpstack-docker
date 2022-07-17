@@ -7,7 +7,7 @@ kind: ConfigMap
 metadata:
   annotations:
     use-subpath: "true"
-  creationTimestamp: null
+  creationTimestamp: 2022-07-17T07:20:50.52Z
   labels:
     io.kompose.service: mosquitto
   name: mosquitto-cm0

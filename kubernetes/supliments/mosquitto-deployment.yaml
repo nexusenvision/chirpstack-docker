@@ -2,10 +2,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    kompose.cmd: kompose convert
+    kompose.cmd: kompose convert --out ./kubernetes/
     kompose.version: 1.26.1 (a9d05d509)
     kompose.volume.type: configMap
-  creationTimestamp: null
+  creationTimestamp: 2022-07-17T07:20:50.52Z
   labels:
     io.kompose.service: mosquitto
   name: mosquitto
@@ -19,10 +19,10 @@ spec:
   template:
     metadata:
       annotations:
-        kompose.cmd: kompose convert
+        kompose.cmd: kompose convert --out ./kubernetes/
         kompose.version: 1.26.1 (a9d05d509)
         kompose.volume.type: configMap
-      creationTimestamp: null
+      creationTimestamp: 2022-07-17T07:20:50.52Z
       labels:
         io.kompose.service: mosquitto
     spec:
