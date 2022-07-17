@@ -4,9 +4,6 @@ services:
   chirpstack:
     image: chirpstack/chirpstack:4.0.0-test.7
     deploy:
-      mode: replicated
-      replicas: 2
-      endpoint_mode: vip
       resources:
         limits:
           cpus: '0.50'
@@ -18,10 +15,6 @@ services:
     volumes:
       - ./configuration/chirpstack:/etc/chirpstack
       - ./lorawan-devices:/opt/lorawan-devices
-    links:
-      - redis
-      - postgres
-      - mosquitto
 
     depends_on:
       - postgres
@@ -52,7 +45,7 @@ services:
   chirpstack-gateway-bridge-as923:
     image: chirpstack/chirpstack-gateway-bridge:3
     ports:
-      - 1701:1701
+      - 1700:1700
     deploy:
       resources:
         limits:
@@ -87,8 +80,6 @@ services:
     labels:
       kompose.volume.type: persistentVolumeClaim
     
-
-
   mosquitto:
     image: eclipse-mosquitto:2
     ports:
