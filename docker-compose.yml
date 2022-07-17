@@ -70,6 +70,12 @@ services:
       - POSTGRES_PASSWORD=root
     labels:
       kompose.volume.type: hostPath
+    deploy:
+
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 50M
 
   redis:
     image: redis:6-alpine
@@ -79,6 +85,12 @@ services:
       - redisdata:/data
     labels:
       kompose.volume.type: persistentVolumeClaim
+    deploy:
+
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 50M
     
   mosquitto:
     image: eclipse-mosquitto:2
@@ -88,6 +100,12 @@ services:
       - ./configuration/eclipse-mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
     labels:
       kompose.volume.type: configMap
+    deploy:
+
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 50M
 
 volumes:
   postgresqldata:

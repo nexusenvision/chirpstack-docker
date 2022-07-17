@@ -31,7 +31,10 @@ spec:
           name: mosquitto
           ports:
             - containerPort: 1883
-          resources: {}
+          resources:
+            limits:
+              cpu: 500m
+              memory: "52428800"
           volumeMounts:
             - mountPath: /mosquitto/config/mosquitto.conf
               name: mosquitto-cm0

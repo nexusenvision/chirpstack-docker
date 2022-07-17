@@ -36,7 +36,10 @@ spec:
           name: postgres
           ports:
             - containerPort: 5432
-          resources: {}
+          resources:
+            limits:
+              cpu: 500m
+              memory: "52428800"
           volumeMounts:
             - mountPath: /docker-entrypoint-initdb.d
               name: postgres-hostpath0
